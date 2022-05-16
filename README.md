@@ -25,6 +25,27 @@ npm i
 npm test # runs TSC
 ```
 
+where TS config is changed this way:
+
+```diff
+ {
+   "compilerOptions": {
+     "target": "es2016",
+     "module": "commonjs",
+-    "types": ["jest"],
++    "types": ["@jest/globals"],
+     "noEmit": true,
+     "esModuleInterop": true,
+     "forceConsistentCasingInFileNames": true,
+     "strict": true,
+     "skipLibCheck": true
+   },
+   "include": [
+     "**/*.ts"
+   ]
+}
+```
+
 Result:
 
 ```plain text
